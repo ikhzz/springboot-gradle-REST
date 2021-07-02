@@ -26,6 +26,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("io.jsonwebtoken:jjwt:0.9.1")
+	implementation("jakarta.xml.bind:jakarta.xml.bind-api:2.3.2")
+	implementation("org.glassfish.jaxb:jaxb-runtime:2.3.2")
 	implementation("org.jasypt:jasypt:1.9.3")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
