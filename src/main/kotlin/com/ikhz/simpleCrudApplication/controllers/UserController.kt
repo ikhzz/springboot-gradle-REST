@@ -1,5 +1,6 @@
 package com.ikhz.simpleCrudApplication.controllers
 
+import com.ikhz.simpleCrudApplication.dto.SignInValidator
 import com.ikhz.simpleCrudApplication.models.User
 import com.ikhz.simpleCrudApplication.services.UserService
 import org.springframework.http.ResponseEntity
@@ -17,7 +18,11 @@ class UserController(val userService: UserService) {
 
     @PostMapping("/signup")
     fun signUp(@Valid @RequestBody user: User, errors: Error): ResponseEntity<Any> {
-
         return userService.signUp(user)
+    }
+
+    @PostMapping("/signin")
+    fun signIn(@Valid @RequestBody user: SignInValidator, errors: Error): ResponseEntity<Any> {
+        return userService.signIn(user)
     }
 }

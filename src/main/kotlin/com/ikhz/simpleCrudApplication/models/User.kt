@@ -8,7 +8,7 @@ import javax.validation.constraints.NotEmpty
 data class User (
 
     @Id
-    var id: String?,
+    val id: String?,
 
     @NotEmpty(message = "User Name is required")
     val userName: String,
@@ -17,7 +17,7 @@ data class User (
     val userEmail: String,
 
     @NotEmpty(message = "User Password is required")
-    val userPassword: String,
+    var userPassword: String,
 
     val role: Role = Role.GUEST,
 )
