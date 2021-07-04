@@ -1,5 +1,6 @@
 package com.ikhz.simpleCrudApplication.models
 
+import lombok.Data
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.DBRef
 import org.springframework.data.mongodb.core.mapping.Document
@@ -8,10 +9,11 @@ import java.util.*
 import javax.validation.constraints.NotNull
 
 @Document
-data class Transaction(
+@Data
+class Transaction(
 
     @Id
-    val id: String?,
+    var id: String?,
 
     @NotNull(message = "Amount is required")
     val amount: Long,

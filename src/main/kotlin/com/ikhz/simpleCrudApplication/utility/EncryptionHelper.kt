@@ -19,6 +19,7 @@ class EncryptionHelper(
     private val encryption = StandardPBEStringEncryptor()
 
     init {
+        // set password key
         encryption.setPassword(passSecret)
     }
 

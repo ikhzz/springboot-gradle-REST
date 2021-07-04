@@ -22,7 +22,7 @@ data class Product(
     val productPrice: Long,
 
     @NotNull(message = "Product stock is required")
-    val productStock: Long,
+    var productStock: Long,
 
     val createdAt: Date = Timestamp(System.currentTimeMillis()),
 
